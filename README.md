@@ -24,36 +24,8 @@ Zero-Payload Architecture
 
 Traditional AI media processing can look like:
 
-User
- │
- ├── Image ───────────────► Cloud
- ├── Voice ────────────────► Cloud
- ├── Conversation ────────► Cloud
- │
- ▼
-Central Processing
- │
- ▼
-Generated Video
+<img width="372" height="574" alt="image" src="https://github.com/user-attachments/assets/d37d4a89-fbe9-4ba9-a94c-671630a42d99" />
 
-The Zero-Payload approach changes the boundary:
-
-                 USER ENVIRONMENT
-┌────────────────────────────────────────┐
-│                                        │
-│  Image ──────┐                         │
-│              │                         │
-│  Voice ──────┼──► Local Processing     │
-│              │                         │
-│  Conversation┘                         │
-│                    │                   │
-│                    ▼                   │
-│             Video Generation           │
-│                    │                   │
-│                    ▼                   │
-│             Talking Video              │
-│                                        │
-└────────────────────────────────────────┘
 
 The goal is to avoid turning the user's personal image, voice, and conversation into unnecessary external payloads.
 
@@ -85,23 +57,8 @@ Generated response
 
 while keeping those assets within the user's controlled processing boundary whenever technically possible.
 
-Processing Principle
+<img width="227" height="352" alt="image" src="https://github.com/user-attachments/assets/4c004398-e3de-4d64-9527-a6c6f7e35f03" />
 
-INPUT
-  │
-  ├── Image
-  ├── Authorized Voice
-  └── Conversation
-          │
-          ▼
-   Local / Controlled
-      Processing
-          │
-          ▼
-   Generated Response
-          │
-          ▼
-     Talking Video
 
 Core Experience
 
@@ -211,31 +168,8 @@ The result is delivered to the user's interface.
 
 Zero-Payload Data Flow
 
-A preferred deployment looks like:
+<img width="527" height="722" alt="image" src="https://github.com/user-attachments/assets/20568db6-e7a9-4f07-9b2b-47ef4efa3ec0" />
 
-┌──────────── USER DEVICE ─────────────┐
-│                                      │
-│  Camera / Upload                     │
-│       │                              │
-│       ▼                              │
-│  Image Asset                         │
-│       │                              │
-│       ├──────────────┐               │
-│       │              │               │
-│       ▼              ▼               │
-│  Voice Profile   Conversation        │
-│       │              │               │
-│       └───────┬──────┘               │
-│               ▼                      │
-│        Processing Engine             │
-│               │                      │
-│               ▼                      │
-│         Video Renderer               │
-│               │                      │
-│               ▼                      │
-│        Talking Video                 │
-│                                      │
-└──────────────────────────────────────┘
 
 Only information genuinely required for an external operation should cross the device boundary.
 
